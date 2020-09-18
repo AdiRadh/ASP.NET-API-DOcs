@@ -1,0 +1,39 @@
+﻿@model List<string>
+<script type="text/javascript">
+
+    function renderMethod(name){
+        var link = '@Url.Action("MethodView","Harness", new { viewName = "-1" })'
+        link = link.replace("-1", name);
+        $('#content').load(link);
+
+    }
+
+    
+</script>
+<div class="sidebar clearfix">
+    <div id="documenter_sidebar">
+        <div id="scrollholder" class="scrollholder">
+            <div id="scroll" class="scroll">
+                <ol id="documenter_nav" class="sidebar-panel nav">
+                    <li>
+                        <a class="current bigFont" href="#documenter-1"><i class="fa fa-terminal"></i>Methods</a>
+                        <ol>
+                            @{
+                                foreach (string name in Model)
+                                {
+                                    <li><a href="#@name" onclick="renderMethod('@name')">@name</a></li>
+                                }
+                            }
+                        </ol>
+                    </li>
+                    <li style="height: 1px; margin: 9px 0; overflow: hidden; background-color: #ad1804"></li>
+                    <li><a href="/Method/" class="bigFont"><i class="fa fa-book"></i>Documentation </a></li>
+                    <li><a href="/Harness/" class="bigFont"><i class="fa fa-exchange"></i>Harness </a></li>
+                    <li><a href="#documenter-4" class="bigFont"><i class="fa fa-envelope"></i>Contact Us</a></li>
+                    <li style="height: 1px; margin: 9px 0; overflow: hidden; background-color: #ad1804"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</div>

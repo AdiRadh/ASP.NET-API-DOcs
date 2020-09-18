@@ -1,0 +1,82 @@
+﻿
+@model TestInsuranceServiceSite.Models.Response
+@using System.Reflection;
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+
+}
+
+@Html.Action("GetAll", "Harness")
+
+<div class="content">
+    <div class="page-header">
+        <h1 class="Insurance Webservice Documentation">Insurance Webservice Test Harness</h1>
+        <div class="discription">
+            <span class="active">For Mapfre Abraxas Customers</span>
+        </div>
+    </div>
+    <div>
+        <div id="documenter_content" class="method-area-wrapper">
+            <div id="documenter-1" class="method">
+                <div class="method-area">
+                    <div class="method-copy">
+                        <div class="method-copy-padding">
+                            <div class="text-widget-wrapper">
+                                <div id="content">
+                                    <h2>@Model.Name</h2>
+                                    @if(Model.ErrorMessage != null)
+                                    {
+                                        <h3>@Model.ErrorMessage</h3>
+                                    }
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                @foreach (PropertyInfo p in Model.GetType().GetProperties())
+                                                {
+                                                    if (p.GetValue(Model) != null)
+                                                    {
+                                                        <th>@p.Name</th>
+                                                    }
+                                                }
+                                            </tr>
+                                        </thead>
+                                        @foreach (PropertyInfo p in Model.GetType().GetProperties())
+                                        {
+                                            if (p.PropertyType == typeof(List<string>) && p.GetValue(Model) != null)
+                                            {
+                                                List<string> value = (List<string>)p.GetValue(Model);
+                                                foreach (string s in value)
+                                                {
+                                                    <tr>
+                                                        <td>@s</td>
+                                                    </tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    @p.GetValue(Model)
+                                                </tr>
+                                            }
+                                        }
+                                        
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer -->
+    <div class="row footer">
+        <div class="col-md-6 col-xs-6 text-left">
+            <a href="#" target="_blank">Mapfre Abraxas</a>
+        </div>
+    </div>
+    <!-- End Footer -->
+</div>

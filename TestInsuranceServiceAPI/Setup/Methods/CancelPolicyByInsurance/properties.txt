@@ -1,0 +1,10 @@
+Username:String
+AuthenticationKey:String
+AccountID:String
+CertificateNumber:String
+Surname:String
+ContactEmail:String
+DealerName:String
+RefundCustomer:String
+RequestValidation:Boolean
+PhoenixCancellation:Boolean

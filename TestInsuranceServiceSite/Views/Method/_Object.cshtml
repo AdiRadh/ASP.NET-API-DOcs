@@ -1,0 +1,49 @@
+﻿@model TestInsuranceServiceSite.Models.ServiceObject
+
+<div id="@Model.Name" class="method">
+    <div id="documenter_content" class="method-area-wrapper">
+        <div id="documenter-1" class="method">
+            <div class="method-area">
+                <div class="method-copy">
+                    <div class="method-copy-padding">
+                        <h1 class="title">@Model.Name</h1>
+                        <h4>Description</h4>
+                        <p>
+                            @Model.Description
+                        </p>
+                        <h4>Properties</h4>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Property Name</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+
+                            @foreach (var p in Model.Properties.Keys.ToList())
+                            {
+                                <tr>
+                                    <td>@p</td>
+                                    <td>@Model.Properties[p]</td>
+                                </tr>
+
+                            }
+                        </table>
+                        @if (Model.IsCode)
+                        {
+                            <h4>Code Example</h4>
+                            <code>
+                                <pre class=" language-none">
+                                    @Model.Code
+                                </pre>
+                            </code>
+                            
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

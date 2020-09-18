@@ -1,0 +1,75 @@
+﻿@model List<TestInsuranceServiceSite.Models.Search>
+@{
+    ViewBag.Title = "Search";
+}
+
+@Html.Action("GetAll", "Method")
+<script type="text/javascript">
+
+    function renderMethod(name){
+        var link = '@Url.Action("RenderPartial", new { viewName = "-1" })'
+        link = link.replace("-1", name);
+        $('#content').load(link);
+
+    }
+    function renderObject(name){
+        var link = '@Url.Action("RenderObject", new { viewName = "-1" })'
+        link = link.replace("-1", name);
+        $('#content').load(link);
+
+    }
+
+</script>
+<div class="content">
+    <div class="page-header">
+        <h1 class="title">Insurance Webservice Documentation</h1>
+        <div class="discription">
+            <span class="active">For Mapfre Abraxas</span>
+        </div>
+    </div>
+    <div class="container-widget">
+        <div class="col-md-12">
+            <div id="content">
+
+                <div id="documenter_content" class="method-area-wrapper">
+                    <div id="documenter-1" class="method">
+                        <div class="method-area">
+                            <div class="method-copy">
+                                <div class="method-copy-padding">
+                                    <div class="method-example">
+                                        <div class="method-example-part">
+                                            <h1 class="title">Search Results:</h1>
+                                            @{
+                                                foreach (var result in Model)
+                                                {
+                                                    switch (result.Type)
+                                                    {
+                                                        case "ServiceObject":
+                                                            <h3><a onclick="renderObject('@result.Name')">@result.Name</a></h3>
+                                                            break;
+                                                        case "WebMethod":
+                                                            <h3><a onclick="renderMethod('@result.Name')">@result.Name</a></h3>
+                                                            break;
+                                                    }
+                                                }
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer -->
+    <div class="row footer">
+        <div class="col-md-6 col-xs-6 text-left">
+            <a href="#" target="_blank">Mapfre Abraxas</a>
+        </div>
+    </div>
+    <!-- End Footer -->
+</div>
+

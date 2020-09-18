@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{487ED1BB-7909-4985-8F2C-A0573D3A4215}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DataLayer</RootNamespace>
+    <AssemblyName>DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Live|AnyCPU'">
+    <OutputPath>bin\Live\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stage|AnyCPU'">
+    <OutputPath>bin\Stage\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UAT|AnyCPU'">
+    <OutputPath>bin\UAT\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\JSONCreator.cs" />
+    <Compile Include="DataProcessor.cs" />
+    <Compile Include="Models\ServiceObject.cs" />
+    <Compile Include="Models\WebMethod.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Setup\Limits\bool.txt" />
+    <Content Include="Setup\Limits\datetime.txt" />
+    <Content Include="Setup\Limits\decimal.txt" />
+    <Content Include="Setup\Limits\int.txt" />
+    <Content Include="Setup\Methods\CancelPolicyByInsurance\code.txt" />
+    <Content Include="Setup\Methods\CancelPolicyByInsurance\description.txt" />
+    <Content Include="Setup\Methods\CancelPolicyByInsurance\format.txt" />
+    <Content Include="Setup\Methods\CancelPolicyByInsurance\methods.txt" />
+    <Content Include="Setup\Methods\CancelPolicyByInsurance\properties.txt" />
+    <Content Include="Setup\Methods\CancelPolicyByInsurance\respreq.txt" />
+    <Content Include="Setup\Methods\ChangePassword\code.txt" />
+    <Content Include="Setup\Methods\ChangePassword\description.txt" />
+    <Content Include="Setup\Methods\ChangePassword\format.txt" />
+    <Content Include="Setup\Methods\ChangePassword\methods.txt" />
+    <Content Include="Setup\Methods\ChangePassword\properties.txt" />
+    <Content Include="Setup\Methods\ChangePassword\respreq.txt" />
+    <Content Include="Setup\Methods\CreateAndHandlePI\code.txt" />
+    <Content Include="Setup\Methods\CreateAndHandlePI\description.txt" />
+    <Content Include="Setup\Methods\CreateAndHandlePI\format.txt" />
+    <Content Include="Setup\Methods\CreateAndHandlePI\methods.txt" />
+    <Content Include="Setup\Methods\CreateAndHandlePI\properties.txt" />
+    <Content Include="Setup\Methods\CreateAndHandlePI\respreq.txt" />
+    <Content Include="Setup\Methods\CreatePolicyByInsuranceRequest\code.txt" />
+    <Content Include="Setup\Methods\CreatePolicyByInsuranceRequest\description.txt" />
+    <Content Include="Setup\Methods\CreatePolicyByInsuranceRequest\format.txt" />
+    <Content Include="Setup\Methods\CreatePolicyByInsuranceRequest\methods.txt" />
+    <Content Include="Setup\Methods\CreatePolicyByInsuranceRequest\properties.txt" />
+    <Content Include="Setup\Methods\CreatePolicyByInsuranceRequest\respreq.txt" />
+    <Content Include="Setup\Methods\GetDetailedProductListRequest\code.txt" />
+    <Content Include="Setup\Methods\GetDetailedProductListRequest\description.txt" />
+    <Content Include="Setup\Methods\GetDetailedProductListRequest\format.txt" />
+    <Content Include="Setup\Methods\GetDetailedProductListRequest\methods.txt" />
+    <Content Include="Setup\Methods\GetDetailedProductListRequest\properties.txt" />
+    <Content Include="Setup\Methods\GetDetailedProductListRequest\respreq.txt" />
+    <Content Include="Setup\Methods\GetIncludedMakesRequest\code.txt" />
+    <Content Include="Setup\Methods\GetIncludedMakesRequest\description.txt" />
+    <Content Include="Setup\Methods\GetIncludedMakesRequest\format.txt" />
+    <Content Include="Setup\Methods\GetIncludedMakesRequest\methods.txt" />
+    <Content Include="Setup\Methods\GetIncludedMakesRequest\properties.txt" />
+    <Content Include="Setup\Methods\GetIncludedMakesRequest\respreq.txt" />
+    <Content Include="Setup\Methods\GetLendersRequest\code.txt" />
+    <Content Include="Setup\Methods\GetLendersRequest\description.txt" />
+    <Content Include="Setup\Methods\GetLendersRequest\format.txt" />
+    <Content Include="Setup\Methods\GetLendersRequest\methods.txt" />
+    <Content Include="Setup\Methods\GetLendersRequest\properties.txt" />
+    <Content Include="Setup\Methods\GetLendersRequest\respreq.txt" />
+    <Content Include="Setup\Methods\GetMakesRequest\code.txt" />
+    <Content Include="Setup\Methods\GetMakesRequest\description.txt" />
+    <Content Include="Setup\Methods\GetMakesRequest\format.txt" />
+    <Content Include="Setup\Methods\GetMakesRequest\methods.txt" />
+    <Content Include="Setup\Methods\GetMakesRequest\properties.txt" />
+    <Content Include="Setup\Methods\GetMakesRequest\respreq.txt" />
+    <Content Include="Setup\Methods\GetReportsListRequest\code.txt" />
+    <Content Include="Setup\Methods\GetReportsListRequest\description.txt" />
+    <Content Include="Setup\Methods\GetReportsListRequest\format.txt" />
+    <Content Include="Setup\Methods\GetReportsListRequest\methods.txt" />
+    <Content Include="Setup\Methods\GetReportsListRequest\properties.txt" />
+    <Content Include="Setup\Methods\GetReportsListRequest\respreq.txt" />
+    <Content Include="Setup\Methods\GetReprintListRequest\code.txt" />
+    <Content Include="Setup\Methods\GetReprintListRequest\description.txt" />
+    <Content Include="Setup\Methods\GetReprintListRequest\format.txt" />
+    <Content Include="Setup\Methods\GetReprintListRequest\methods.txt" />
+    <Content Include="Setup\Methods\GetReprintListRequest\properties.txt" />
+    <Content Include="Setup\Methods\GetReprintListRequest\respreq.txt" />
+    <Content Include="Setup\Methods\GetSavedDetailsListRequest\code.txt" />
+    <Content Include="Setup\Methods\GetSavedDetailsListRequest\description.txt" />
+    <Content Include="Setup\Methods\GetSavedDetailsListRequest\format.txt" />
+    <Content Include="Setup\Methods\GetSavedDetailsListRequest\methods.txt" />
+    <Content Include="Setup\Methods\GetSavedDetailsListRequest\properties.txt" />
+    <Content Include="Setup\Methods\GetSavedDetailsListRequest\respreq.txt" />
+    <Content Include="Setup\Methods\MTAPolicyByInsuranceRequest\code.txt" />
+    <Content Include="Setup\Methods\MTAPolicyByInsuranceRequest\description.txt" />
+    <Content Include="Setup\Methods\MTAPolicyByInsuranceRequest\format.txt" />
+    <Content Include="Setup\Methods\MTAPolicyByInsuranceRequest\methods.txt" />
+    <Content Include="Setup\Methods\MTAPolicyByInsuranceRequest\properties.txt" />
+    <Content Include="Setup\Methods\MTAPolicyByInsuranceRequest\respreq.txt" />
+    <Content Include="Setup\Methods\PrintReport\code.txt" />
+    <Content Include="Setup\Methods\PrintReport\description.txt" />
+    <Content Include="Setup\Methods\PrintReport\format.txt" />
+    <Content Include="Setup\Methods\PrintReport\methods.txt" />
+    <Content Include="Setup\Methods\PrintReport\properties.txt" />
+    <Content Include="Setup\Methods\PrintReport\respreq.txt" />
+    <Content Include="Setup\Methods\ReprintPolicyRequest\code.txt" />
+    <Content Include="Setup\Methods\ReprintPolicyRequest\description.txt" />
+    <Content Include="Setup\Methods\ReprintPolicyRequest\format.txt" />
+    <Content Include="Setup\Methods\ReprintPolicyRequest\methods.txt" />
+    <Content Include="Setup\Methods\ReprintPolicyRequest\properties.txt" />
+    <Content Include="Setup\Methods\ReprintPolicyRequest\respreq.txt" />
+    <Content Include="Setup\Methods\SavePI\code.txt" />
+    <Content Include="Setup\Methods\SavePI\description.txt" />
+    <Content Include="Setup\Methods\SavePI\format.txt" />
+    <Content Include="Setup\Methods\SavePI\methods.txt" />
+    <Content Include="Setup\Methods\SavePI\properties.txt" />
+    <Content Include="Setup\Methods\SavePI\respreq.txt" />
+    <Content Include="Setup\Methods\SavePolicyDetailsRequest\code.txt" />
+    <Content Include="Setup\Methods\SavePolicyDetailsRequest\description.txt" />
+    <Content Include="Setup\Methods\SavePolicyDetailsRequest\format.txt" />
+    <Content Include="Setup\Methods\SavePolicyDetailsRequest\methods.txt" />
+    <Content Include="Setup\Methods\SavePolicyDetailsRequest\properties.txt" />
+    <Content Include="Setup\Methods\SavePolicyDetailsRequest\respreq.txt" />
+    <Content Include="Setup\Methods\ValidateLogin\code.txt" />
+    <Content Include="Setup\Methods\ValidateLogin\description.txt" />
+    <Content Include="Setup\Methods\ValidateLogin\format.txt" />
+    <Content Include="Setup\Methods\ValidateLogin\methods.txt" />
+    <Content Include="Setup\Methods\ValidateLogin\properties.txt" />
+    <Content Include="Setup\Methods\ValidateLogin\respreq.txt" />
+    <Content Include="Setup\Methods\ValidatePolicy\code.txt" />
+    <Content Include="Setup\Methods\ValidatePolicy\description.txt" />
+    <Content Include="Setup\Methods\ValidatePolicy\format.txt" />
+    <Content Include="Setup\Methods\ValidatePolicy\methods.txt" />
+    <Content Include="Setup\Methods\ValidatePolicy\properties.txt" />
+    <Content Include="Setup\Methods\ValidatePolicy\respreq.txt" />
+    <Content Include="Setup\Request\CustomerDetailsRequest\code.txt" />
+    <Content Include="Setup\Request\CustomerDetailsRequest\description.txt" />
+    <Content Include="Setup\Request\CustomerDetailsRequest\format.txt" />
+    <Content Include="Setup\Request\CustomerDetailsRequest\methods.txt" />
+    <Content Include="Setup\Request\CustomerDetailsRequest\properties.txt" />
+    <Content Include="Setup\Request\CustomerDetailsRequest\respreq.txt" />
+    <Content Include="Setup\Request\InsuranceRequest\code.txt" />
+    <Content Include="Setup\Request\InsuranceRequest\description.txt" />
+    <Content Include="Setup\Request\InsuranceRequest\format.txt" />
+    <Content Include="Setup\Request\InsuranceRequest\methods.txt" />
+    <Content Include="Setup\Request\InsuranceRequest\properties.txt" />
+    <Content Include="Setup\Request\InsuranceRequest\respreq.txt" />
+    <Content Include="Setup\Request\IPIDRequest\code.txt" />
+    <Content Include="Setup\Request\IPIDRequest\description.txt" />
+    <Content Include="Setup\Request\IPIDRequest\format.txt" />
+    <Content Include="Setup\Request\IPIDRequest\methods.txt" />
+    <Content Include="Setup\Request\IPIDRequest\properties.txt" />
+    <Content Include="Setup\Request\IPIDRequest\respreq.txt" />
+    <Content Include="Setup\Request\ProductdetailsRequest\code.txt" />
+    <Content Include="Setup\Request\ProductdetailsRequest\description.txt" />
+    <Content Include="Setup\Request\ProductdetailsRequest\format.txt" />
+    <Content Include="Setup\Request\ProductdetailsRequest\methods.txt" />
+    <Content Include="Setup\Request\ProductdetailsRequest\properties.txt" />
+    <Content Include="Setup\Request\ProductdetailsRequest\respreq.txt" />
+    <Content Include="Setup\Response\GetDetailedProduct\code.txt" />
+    <Content Include="Setup\Response\GetDetailedProduct\description.txt" />
+    <Content Include="Setup\Response\GetDetailedProduct\format.txt" />
+    <Content Include="Setup\Response\GetDetailedProduct\methods.txt" />
+    <Content Include="Setup\Response\GetDetailedProduct\properties.txt" />
+    <Content Include="Setup\Response\GetDetailedProduct\respreq.txt" />
+    <Content Include="Setup\Response\GetIncludedMake\code.txt" />
+    <Content Include="Setup\Response\GetIncludedMake\description.txt" />
+    <Content Include="Setup\Response\GetIncludedMake\format.txt" />
+    <Content Include="Setup\Response\GetIncludedMake\methods.txt" />
+    <Content Include="Setup\Response\GetIncludedMake\properties.txt" />
+    <Content Include="Setup\Response\GetIncludedMake\respreq.txt" />
+    <Content Include="Setup\Response\GetLender\code.txt" />
+    <Content Include="Setup\Response\GetLender\description.txt" />
+    <Content Include="Setup\Response\GetLender\format.txt" />
+    <Content Include="Setup\Response\GetLender\methods.txt" />
+    <Content Include="Setup\Response\GetLender\properties.txt" />
+    <Content Include="Setup\Response\GetLender\respreq.txt" />
+    <Content Include="Setup\Response\GetMake\code.txt" />
+    <Content Include="Setup\Response\GetMake\description.txt" />
+    <Content Include="Setup\Response\GetMake\format.txt" />
+    <Content Include="Setup\Response\GetMake\methods.txt" />
+    <Content Include="Setup\Response\GetMake\properties.txt" />
+    <Content Include="Setup\Response\GetMake\respreq.txt" />
+    <Content Include="Setup\Response\GetProductList\code.txt" />
+    <Content Include="Setup\Response\GetProductList\description.txt" />
+    <Content Include="Setup\Response\GetProductList\format.txt" />
+    <Content Include="Setup\Response\GetProductList\methods.txt" />
+    <Content Include="Setup\Response\GetProductList\properties.txt" />
+    <Content Include="Setup\Response\GetProductList\respreq.txt" />
+    <Content Include="Setup\Response\GetReprintList\code.txt" />
+    <Content Include="Setup\Response\GetReprintList\description.txt" />
+    <Content Include="Setup\Response\GetReprintList\format.txt" />
+    <Content Include="Setup\Response\GetReprintList\methods.txt" />
+    <Content Include="Setup\Response\GetReprintList\properties.txt" />
+    <Content Include="Setup\Response\GetReprintList\respreq.txt" />
+    <Content Include="Setup\Response\GetSavedDetailsList\code.txt" />
+    <Content Include="Setup\Response\GetSavedDetailsList\description.txt" />
+    <Content Include="Setup\Response\GetSavedDetailsList\format.txt" />
+    <Content Include="Setup\Response\GetSavedDetailsList\methods.txt" />
+    <Content Include="Setup\Response\GetSavedDetailsList\properties.txt" />
+    <Content Include="Setup\Response\GetSavedDetailsList\respreq.txt" />
+    <Content Include="Setup\Response\InsuranceResponse\code.txt" />
+    <Content Include="Setup\Response\InsuranceResponse\description.txt" />
+    <Content Include="Setup\Response\InsuranceResponse\format.txt" />
+    <Content Include="Setup\Response\InsuranceResponse\methods.txt" />
+    <Content Include="Setup\Response\InsuranceResponse\properties.txt" />
+    <Content Include="Setup\Response\InsuranceResponse\respreq.txt" />
+    <Content Include="Setup\Response\IPIDResponse\code.txt" />
+    <Content Include="Setup\Response\IPIDResponse\description.txt" />
+    <Content Include="Setup\Response\IPIDResponse\format.txt" />
+    <Content Include="Setup\Response\IPIDResponse\methods.txt" />
+    <Content Include="Setup\Response\IPIDResponse\properties.txt" />
+    <Content Include="Setup\Response\IPIDResponse\respreq.txt" />
+    <Content Include="Setup\Response\PrintSingleReportResponse\code.txt" />
+    <Content Include="Setup\Response\PrintSingleReportResponse\description.txt" />
+    <Content Include="Setup\Response\PrintSingleReportResponse\format.txt" />
+    <Content Include="Setup\Response\PrintSingleReportResponse\methods.txt" />
+    <Content Include="Setup\Response\PrintSingleReportResponse\properties.txt" />
+    <Content Include="Setup\Response\PrintSingleReportResponse\respreq.txt" />
+    <Content Include="Setup\Response\ProductDetailsResponse\code.txt" />
+    <Content Include="Setup\Response\ProductDetailsResponse\description.txt" />
+    <Content Include="Setup\Response\ProductDetailsResponse\format.txt" />
+    <Content Include="Setup\Response\ProductDetailsResponse\methods.txt" />
+    <Content Include="Setup\Response\ProductDetailsResponse\properties.txt" />
+    <Content Include="Setup\Response\ProductDetailsResponse\respreq.txt" />
+    <Content Include="Setup\Response\QuoteResponse\code.txt" />
+    <Content Include="Setup\Response\QuoteResponse\description.txt" />
+    <Content Include="Setup\Response\QuoteResponse\format.txt" />
+    <Content Include="Setup\Response\QuoteResponse\methods.txt" />
+    <Content Include="Setup\Response\QuoteResponse\properties.txt" />
+    <Content Include="Setup\Response\QuoteResponse\respreq.txt" />
+    <Content Include="Setup\Response\ReportCollection\code.txt" />
+    <Content Include="Setup\Response\ReportCollection\description.txt" />
+    <Content Include="Setup\Response\ReportCollection\format.txt" />
+    <Content Include="Setup\Response\ReportCollection\methods.txt" />
+    <Content Include="Setup\Response\ReportCollection\properties.txt" />
+    <Content Include="Setup\Response\ReportCollection\respreq.txt" />
+    <Content Include="Setup\Response\SaveCustomerDetailsResponse\code.txt" />
+    <Content Include="Setup\Response\SaveCustomerDetailsResponse\description.txt" />
+    <Content Include="Setup\Response\SaveCustomerDetailsResponse\format.txt" />
+    <Content Include="Setup\Response\SaveCustomerDetailsResponse\methods.txt" />
+    <Content Include="Setup\Response\SaveCustomerDetailsResponse\properties.txt" />
+    <Content Include="Setup\Response\SaveCustomerDetailsResponse\respreq.txt" />
+    <Content Include="Setup\Response\ValidationDetails\code.txt" />
+    <Content Include="Setup\Response\ValidationDetails\description.txt" />
+    <Content Include="Setup\Response\ValidationDetails\format.txt" />
+    <Content Include="Setup\Response\ValidationDetails\methods.txt" />
+    <Content Include="Setup\Response\ValidationDetails\properties.txt" />
+    <Content Include="Setup\Response\ValidationDetails\respreq.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Json\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

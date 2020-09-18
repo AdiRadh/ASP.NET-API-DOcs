@@ -1,0 +1,60 @@
+﻿@model TestInsuranceServiceSite.Models.WebMethod
+
+@if (ViewBag.MyErrorMessage != null)
+{
+    <div>
+        <p>@ViewBag.MyErrorMessage</p>
+    </div>
+}
+<div id="documenter_content" class="method-area-wrapper">
+    <div id="documenter-1" class="method">
+        <div class="method-area">
+            <div class="method-copy">
+                <div class="method-copy-padding">
+                    <div class="@Model.Name">
+                        <div class="method-example">
+                            <div class="method-example-part">
+                                <h3>@Model.Name</h3>
+                                <p>
+                                    @Model.Description
+                                </p>
+
+                                @{
+                                    using (Html.BeginForm("Service", "Harness", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                    {
+                                        <input name="Name" type="hidden" value="@Model.Name"/>
+                                        foreach (var p in Model.Parameters)
+                                        {
+                                            <label for="@p.Key">@p.Key</label>
+                                            if (p.Value.Equals("String"))
+                                            {
+                                                <input name="@p.Key" type="text" />
+                                            }
+                                            else if (p.Value.Equals("Boolean"))
+                                            {
+                                                <input name="@p.Key" type="checkbox" />
+                                            }
+                                            else if (p.Value.Equals("DateTime"))
+                                            {
+                                                <input name="@p.Key" type="datetime" />
+                                            }
+                                            else if (p.Value.Equals("Integer") || p.Value.Equals("Decimal"))
+                                            {
+                                                <input name="@p.Key" type="number" />
+                                            }
+                                        }
+                                        <br />
+                                        <input type="submit" name="submit" value="Submit Form" />
+                                        <input type="reset" value="Reset" />
+                                    }
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

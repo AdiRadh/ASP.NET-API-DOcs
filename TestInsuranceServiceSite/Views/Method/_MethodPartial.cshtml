@@ -1,0 +1,52 @@
+﻿@model TestInsuranceServiceSite.Models.WebMethod
+
+
+<div id="@Model.Name" class="method">
+    <div id="documenter_content" class="method-area-wrapper">
+        <div id="documenter-1" class="method">
+            <div class="method-area">
+                <div class="method-copy">
+                    <div class="method-copy-padding">
+                        <h1 class="title">@Model.Name</h1>
+                        <h4>Description</h4>
+                        <p>
+                            @Model.Description
+                        </p>
+                        <h4>Properties</h4>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Parameter Name</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+
+                            @foreach (var p in Model.Parameters)
+                            {
+                                <tr>
+                                    <td>@p.Key</td>
+                                    <td>@p.Value</td>
+                                </tr>
+
+                            }
+                        </table>
+                        @if (Model.IsCode)
+                        {
+                            <h4>Code Example</h4>
+                            <code language>
+
+                                @Model.Code
+
+                            </code>
+                        }
+                        <h4>Code Screenshot</h4>
+                        <img src="~/Content/img/Screen/@Model.Name/screen.png" />
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

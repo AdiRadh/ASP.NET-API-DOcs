@@ -1,0 +1,93 @@
+﻿@model Dictionary<string, string>
+@{
+    List<string> request = new List<string>();
+    List<string> response = new List<string>();
+    List<string> methods = new List<string>();
+
+    foreach (var kp in Model)
+    {
+        switch (kp.Value)
+        {
+            case ("request"):
+                request.Add(kp.Key);
+                break;
+
+            case ("response"):
+                response.Add(kp.Key);
+
+                break;
+
+            case ("method"):
+                methods.Add(kp.Key);
+                break;
+        }
+    }
+
+}
+<script type="text/javascript">
+
+    function renderMethod(name){
+        var link = '@Url.Action("RenderPartial", new { viewName = "-1" })'
+        link = link.replace("-1", name);
+        $('#content').load(link);
+
+    }
+    function renderObject(name){
+        var link = '@Url.Action("RenderObject", new { viewName = "-1" })'
+        link = link.replace("-1", name);
+        $('#content').load(link);
+
+    }
+
+</script>
+<div class="sidebar clearfix">
+
+    <div id="documenter_sidebar">
+        <div id="scrollholder" class="scrollholder">
+            <div id="scroll" class="scroll">
+                <ol id="documenter_nav" class="sidebar-panel nav">
+                    <li><a class="current bigFont" href="#documenter-1"><i class="fa fa-home"></i> Introduction</a></li>
+                    <li>
+                        <a href="#documenter-2" class="bigFont"><i class="fa fa-code"></i> Request Objects</a>
+                        <ol>
+                            @{
+                                foreach (string name in request)
+                                {
+                                    <li><a href="#@name" onclick="renderObject('@name')">@name</a></li>
+                                }
+                            }
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#documenter-3" class="bigFont"><i class="fa fa-code"></i> Response Objects</a>
+                        <ol>
+                            @{
+                                foreach (string name in response)
+                                {
+                                    <li><a href="#@name" onclick="renderObject('@name')">@name</a></li>
+                                }
+                            }
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#documenter-3" class="bigFont"><i class="fa fa-flask"></i> Webservice Methods </a>
+                        <ol>
+                            @{
+                                foreach (string name in methods)
+                                {
+                                    <li><a href="#@name" onclick="renderMethod('@name')">@name</a></li>
+                                }
+                            }
+                        </ol>
+                    </li>
+                    <li style="height: 1px; margin: 9px 0; overflow: hidden; background-color: #ad1804"></li>
+                    <li><a href="/Method/" class="bigFont"><i class="fa fa-book"></i>Documentation </a></li>
+                    <li><a href="/Harness/" class="bigFont"><i class="fa fa-exchange"></i>Harness </a></li>
+                    <li><a href="#documenter-4" class="bigFont"><i class="fa fa-envelope"></i>Contact Us</a></li>
+                    <li style="height: 1px; margin: 9px 0; overflow: hidden; background-color: #ad1804"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</div>

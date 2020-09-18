@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mapfre Insurance Webservice Docs">
+    <meta name="keywords" content="bootstrap, responsive," />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Insurance Web Test</title>
+
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+    <link rel="icon" href="~/Content/img/favicon.ico" type="image/x-icon" />
+
+    <!-- ========== Css Files ========== -->
+    <link href="~/Content/prism.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+    <link href="~/Content/root.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- Start Page Loading -->
+    <div class="loading"><img src="~/Content/img/loading.gif" alt="loading-img"></div>
+    <!-- End Page Loading -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START TOP -->
+    <div id="top" class="clearfix">
+
+        <!-- Start App Logo -->
+        <div class="applogo">
+            <a href='@Url.Action("Index","Method")' class="logo"><img src="~/Content/img/logo-mapfre.png" alt="mapfre logo"></a>
+        </div>
+        <!-- End App Logo -->
+        <!-- Start Sidebar Show Hide Button -->
+        <a href="javascript:void(0);" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+        <a href="javascript:void(0);" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
+        <!-- End Sidebar Show Hide Button -->
+        <!-- Start Searchbox -->
+        @using (Html.BeginForm("Search", "Method", FormMethod.Post, new { @class = "searchform" }))
+        {
+            <input type="text" class="searchbox" id="searchbox" name="criteria" placeholder="Search">
+            <span class="searchbutton"><i class="fa fa-search"></i></span>
+        }
+        <!-- End Searchbox -->
+        <!-- Start Top Menu -->
+        <ul class="topmenu">
+            <li><a href='@Url.Action("Index", "Method")'>Documentation</a></li>
+            <li><a href='@Url.Action("Index","Harness")'>Harness</a></li>
+            <li><a href="javascript:void(0);">Contact Us</a></li>
+        </ul>
+        <!-- End Top Menu -->
+
+    </div>
+
+    @RenderBody()
+
+    <!-- ================================================
+    jQuery Library
+    ================================================ -->
+    <script src="~/Scripts/js/jquery.1.6.4.js"></script>
+    <script src="~/Scripts/js/jquery.min.js"></script>
+
+    <!-- ================================================
+    Bootstrap Core JavaScript File
+    ================================================ -->
+    <script src="~/Scripts/js/bootstrap/bootstrap.min.js"></script>
+
+
+    <!-- ================================================
+    Plugin.js - Some Specific JS codes for Plugin Settings
+    ================================================ -->
+    <script src="~/Scripts/js/plugins.js"></script>
+
+    <!-- ================================================
+    Data Tables
+    ================================================ -->
+    <script src="~/Scripts/js/datatables/datatables.min.js"></script>
+
+    <!-- ================================================
+    jQuery UI
+    ================================================ -->
+    <script src="~/Scripts/js/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- ================================================
+    Moment.js
+    ================================================ -->
+    <script src="~/Scripts/js/moment/moment.min.js"></script>
+
+    <!-- ================================================
+    Prism
+    ================================================ -->
+    <script src="~/Scripts/js/prism.js"></script>
+    <script>
+        document.createElement('section');
+        var duration = 500, easing = 'swing';</script>
+    <!-- ================================================
+    Sidebar Scroll
+    ================================================ -->
+    <!-- ================================================
+    Scroll
+    ================================================ -->
+    <script src="~/Scripts/js/jquery.scrollTo-1.4.2-min.js"></script>
+    <script src="~/Scripts/js/jquery.easing.js"></script>
+    <script src="~/Scripts/js/script.js"></script>
+    <script src="~/Scripts/js/scroll.js"></script>
+    <script src="~/Scripts/js/common.js"></script>
+    <script src="~/Scripts/js/jquery.mobile-menu.min.js"></script>
+
+</body>
+</html>

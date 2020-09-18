@@ -1,0 +1,71 @@
+﻿
+@Html.Action("GetAll", "Method")
+
+<div class="content">
+    <div class="page-header">
+        <h1 class="title">Insurance Webservice Documentation</h1>
+        <div class="discription">
+            <span class="active">For Mapfre Abraxas</span>
+        </div>
+    </div>
+    <div class="container-widget">
+        <div class="col-md-12">
+            <div id="content">
+                <div id="documenter_content" class="method-area-wrapper">
+                    <div id="documenter-1" class="method">
+                        <div class="method-area">
+                            <div class="method-copy">
+                                <div class="method-copy-padding">
+                                    <div class="text-widget-wrapper">
+                                        <div id="content">
+                                            <h3>Introduction</h3>
+                                            <p>This document aims to set out the relevant details and setup process of the Web Service, for use by Mapfre Customers to make use of our online services</p>
+                                            <br />
+                                            <h3>Service Setup</h3>
+                                            <p>The Webservice is set up on the following URL:<a href="https://exampleurl.co.uk/test.asmx">https://exampleurl.co.uk/test.asmx</a></p>
+                                            
+                                            <p>Add the service to your system as appropriate. The following is an example of adding the service on C# ASP.NET using Visual Studio and .NET 4.6</p>
+                                            <ol>
+                                                <li><p><b>Right-click</b> on the project you wish to add the service to, then click on "Add Service Reference"</p>
+                                                    <img class="screenshot" src="~/Content/img/Screen/Tutorial/two.png" alt="Add Service Reference" />
+                                                    </li>
+                                                
+                                                <li><p>Click on "Advanced..." at the bottom of the window</p>
+                                                    <img class="screenshot" src="~/Content/img/Screen/Tutorial/three.png" alt="Advanced.." /></li>
+                                                <li><p>Click "Add Web Reference.."</p>
+                                                    <img class="screenshot" src="~/Content/img/Screen/Tutorial/four.png" alt="Add Web Reference.." /></li>
+                                                <li><p>Paste the service URL onto the Address bar and press <b>Enter</b></p></li>
+                                                <li><p>Name the service as appropriate (but not "InsuranceWebService" as that conflicts with the service methods and adds more steps to calling the service!)</p></li>
+                                                <li><p>Press "Add", and you're all set up!</p>
+                                                    <img class="screenshot" src="~/Content/img/Screen/Tutorial/five.png" alt="Add Web Service Reference" /></li>
+                                            </ol>
+                                            <br />
+                                            <h3>Calling the Service</h3>
+                                            <p>Call methods from the Webservice as appropriate. The following works through calling service methods on C# ASP.NET:</p>
+                                            <ol>
+                                                <li>Add a reference to the service in the relevant C# file</li>
+                                                <li>Create a new InsuranceWebService Object</li>
+                                                <li>To call a method, create the relevant Request object for that method</li>
+                                                <li>Assign the relevant variables to the request object</li>
+                                                <li>Pass the request through to the method, and retrieve the response object</li>
+                                            </ol>
+                                            <p>You have now successfully called the Webservice</p>
+                                            <br/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Footer -->
+        <div class="row footer">
+            <div class="col-md-6 col-xs-6 text-left">
+                <a href="#" target="_blank">Mapfre Abraxas</a>
+            </div>
+        </div>
+        <!-- End Footer -->
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@model List<TestInsuranceServiceSite.Models.WebMethod>
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<style>
+    label {
+        display: block;
+    }
+
+    input {
+        display: block;
+    }
+</style>
+@Html.Action("GetAll", "Harness")
+<div class="content">
+    <div class="page-header">
+        <h1 class="title">Insurance Webservice Test Harness</h1>
+        <div class="discription">
+            <span class="active">For Mapfre Abraxas Customers</span>
+        </div>
+    </div>
+    <div id="content" class="container-widget">
+        <div class="col-md-12">
+            <div id="documenter_content" class="method-area-wrapper">
+                <div id="documenter-1" class="method">
+                    <div class="method-area">
+                        <div class="method-copy">
+                            <div class="method-copy-padding">
+                                <h1>Harness</h1>
+                            </div>
+                            <h3>Click on a method from the sidebar to load it</h3>
+                            <p>Here you can test webservice functionality using our test harness!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Start Footer -->
+<div class="row footer">
+    <div class="col-md-6 col-xs-6 text-left">
+        <a href="#" target="_blank">Mapfre Abraxas</a>
+    </div>
+</div>
+<!-- End Footer -->

@@ -1,0 +1,10 @@
+Submits a cancellation request to Mapfre
+
+Requires:
+Authentication Information
+Policy Details
+Reason for cancellation
+Refund option
+
+Package Authentication Information inside a Session Request, and the rest inside a Cancellation Request
+Package both requests inside an InsuranceRequest to send to the service

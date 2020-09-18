@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Policies>
+  <Policy>
+    <Description></Description>
+    <Product></Product>
+    <Plan></Plan>
+    <NonMonthly></NonMonthly>
+    <MinTerm></MinTerm>
+    <MaxTerm></MaxTerm>
+    <Period></Period>
+    <MinPremium></MinPremium>
+    <MaxPremium></MaxPremium>
+    <MinPrice></MinPrice>
+    <MaxPrice></MaxPrice>
+    <MaxAge></MaxAge>
+    <MaxMiles></MaxMiles>
+    <MinCC></MinCC>
+  </Policy>
+</Policies>

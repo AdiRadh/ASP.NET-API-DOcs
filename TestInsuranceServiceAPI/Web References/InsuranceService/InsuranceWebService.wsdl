@@ -1,0 +1,2662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.mapfreabraxas.com/webservices" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.mapfreabraxas.com/webservices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.mapfreabraxas.com/webservices">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetIPIDDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PolicyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIPIDDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIPIDDocumentResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsuranceProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsuranceProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInsuranceProductsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelPolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelPolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelPolicyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePolicyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePolicyByAuthenticationKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePolicyByAuthenticationKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePolicyByAuthenticationKeyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertificate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertificateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCertificateResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailedProductList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startdate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailedProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailedProductListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncludedMakes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncludedMakesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncludedMakesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLenders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLendersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLendersResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMakes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMakesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMakesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicies">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeliveryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GuaranteeWarrantyDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoanProvided" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehicleNew" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPoliciesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPoliciesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeliveryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GuaranteeWarrantyDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoanProvided" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehicleNew" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportsList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetReportsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportsListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReprintList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startdate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReprintListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReprintListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSavedDetailsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSavedDetailsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSavedDetailsListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MTAPolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MTAPolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MTAPolicyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reportID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrintReportResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReprintPolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="certificateno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReprintPolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReprintPolicyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveDetailsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidatePolicyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePolicyByAuthenticationKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePolicyByAuthenticationKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidatePolicyByAuthenticationKeyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IPIDDocumentRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:IPIDRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IPIDRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IPIDDocumentRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IPIDDocumentRequestResult" type="tns:IPIDResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IPIDResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsuranceProductsRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ProductDetailsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProductDetailsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsuranceProductsRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsuranceProductsRequestResult" type="tns:ProductDetailsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProductDetailsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="GapPolicyModelList" type="tns:ArrayOfGapProductModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGapProductModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GapProductModel" nillable="true" type="tns:GapProductModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GapProductModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DLL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxBenefit" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DFA" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MotorXS" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoOfTyres" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoOfWheels" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TyreLimit" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="WheelLimit" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TyresPerYear" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxVehiclePrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinVehiclePrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxGrossPremium" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinGrossPremium" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxTerm" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinTerm" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxVehicleAge" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelPolicyByInsuranceRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insrequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InsuranceRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RequestID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bank" type="tns:BankRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Policy" type="tns:PolicyRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="tns:ClientRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Loan" type="tns:LoanRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle" type="tns:VehicleRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Session" type="tns:SessionRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cancellation" type="tns:CancelRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="MTA" type="tns:AdjustRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documents" type="tns:DocumentRequest" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPreBook" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorDetails">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="errCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="errDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="errCause" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="errResolution" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BankRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Bank">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="PayeeEmail" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Bank">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankPostcode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaperlessDDI" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeHouseNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeePostcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeSurname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayeeEmailAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PolicyHolderPaying" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SortCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PolicyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:InsurancePolicy">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CancelledbyIntermediary" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Amendment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AmendmentDetails" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CancellationReason" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CancellationDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CancellationFee" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Commission1" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Commission2" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ExpiryDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="GrossReturnPremium" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InsurancePolicy">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Bookmark" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaidByCard" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalReference" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoverPeriod" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyCodeDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GetLoanDetails" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrossPremium" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Interest" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InsurancePremiumTax" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MonthlyPremium" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NettPremium" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfPremiums" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PolicySelected" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Product" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SchemeCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WarClaimLimit" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatePISupplied" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCustomerConfirmed" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Client">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Client">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Contact_by_email" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompany" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Contact_by_text" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Contact_by_phone" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Contact_by_post" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfBirth" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Employer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HouseNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LoanRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Loan">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Loan">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Advance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AdvanceRentals" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BorrowerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BorrowerRelationship" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoverResidual" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lender" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoanPayment" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoanTerm" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NegativeEquity" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PremiumAddedToLoan" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RepaymentIncCPI" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Residual" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PremiumFinanced" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VehicleRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Vehicle">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Vehicle">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MOTDate" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="AirConditioner" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AntilockBrakes" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Automatic" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoverStartDate" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateRegistered" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatePurchased" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="EngineSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FourWheelDrive" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fuel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mileage" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Model" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Motorcycle" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewVehicle" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Registration" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SpecialCategory" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Turbo" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApprovedUsed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SessionRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:InsuranceSession">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Transaction" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionContactName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionContactDetails" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="SearchDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReportID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReportDate" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InsuranceSession">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalReference" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bordereaux" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UniqueCertificateName" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bank" type="tns:Bank" />
+          <s:element minOccurs="0" maxOccurs="1" name="Clients" type="tns:ArrayOfClient" />
+          <s:element minOccurs="1" maxOccurs="1" name="Complete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeliveryDate" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="GuaranteeWarrantyDate" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="Loan" type="tns:Loan" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoanProvided" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaidByCard" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PPIQuote" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Policies" type="tns:ArrayOfInsurancePolicy" />
+          <s:element minOccurs="1" maxOccurs="1" name="SavedSessionId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle" type="tns:Vehicle" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebSessionId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DealerFittedAccessoriesValue" nillable="true" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Client" nillable="true" type="tns:Client" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInsurancePolicy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InsurancePolicy" nillable="true" type="tns:InsurancePolicy" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CancelRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CertificateNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefundCustomer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancellationReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoenixCancellation" type="tns:PhoenixDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhoenixDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SSOLogin" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasPaid" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HouseNameNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateRegistrated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleMake" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleModel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRange" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiclePrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeliveryDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrossPremium" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AdjustRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RequestValidation" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MTAReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Details" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDetail" type="tns:ErrorDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoenixMTA" type="tns:PhoenixDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CertificateNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrintCertificate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrintDirectDebit" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrintTermsandConditions" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrintPolicySummary" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrintStatementofPrice" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelPolicyByInsuranceRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelPolicyByInsuranceRequestResult" type="tns:InsuranceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InsuranceResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CertificateNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueCertificateNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ChangePasswordRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordRequestResult" type="tns:InsuranceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAndHandlePI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QuoteRequestObject" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAndHandlePIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAndHandlePIResult" type="tns:QuoteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QuoteResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QuoteNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Details" type="tns:CustomerDetailsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerDetailsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Session" type="tns:SessionRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="tns:ClientRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle" type="tns:VehicleRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCustomerResult" type="tns:SaveCustomerDetailsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SaveCustomerDetailsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreatePolicyByInsuranceRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePolicyByInsuranceRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePolicyByInsuranceRequestResult" type="tns:InsuranceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailedProductListRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SearchDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailedProductListRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailedProductListRequestResult" type="tns:GetDetailedProduct" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetDetailedProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Product" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plan" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="NonMonthly" type="tns:ArrayOfBoolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinTerm" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxTerm" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Period" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinPremium" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxPremium" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinPrice" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxPrice" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxAge" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxMiles" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinCC" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBoolean">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="boolean" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDouble">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="double" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetIncludedMakesRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insrequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncludedMakesRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncludedMakesRequestResult" type="tns:GetIncludedMake" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetIncludedMake">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GetVehicleList" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLendersRequest">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLendersRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLendersRequestResult" type="tns:GetLender" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetLender">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Lenders" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMakesRequest">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMakesRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMakesRequestResult" type="tns:GetVehicleMake" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVehicleMake">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleMakes" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProductListRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductListRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductListRequestResult" type="tns:GetProductList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetProductList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Plan" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReportsListRequest">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetReportsListRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportsListRequestResult" type="tns:ArrayOfReportCollectionResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReportCollectionResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReportCollectionResponse" nillable="true" type="tns:ReportCollectionResponse" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReportCollectionResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReprintListRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReprintListRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReprintListRequestResult" type="tns:GetReprintList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetReprintList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CertificateNo" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="PeriodOfCover" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Registration" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSavedDetailsListRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSavedDetailsListRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSavedDetailsListRequestResult" type="tns:GetSavedDetailsList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetSavedDetailsList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Registration" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateEntered" type="tns:ArrayOfDateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDateTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="dateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MTAPolicyByInsuranceRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insrequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MTAPolicyByInsuranceRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MTAPolicyByInsuranceRequestResult" type="tns:InsuranceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintReportRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReportDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintReportRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrintReportRequestResult" type="tns:PrintSingleReportResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PrintSingleReportResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReprintPolicyRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReprintPolicyRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReprintPolicyRequestResult" type="tns:InsuranceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QuoteRequestObject" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SavePIResult" type="tns:QuoteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePolicyDetailsRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePolicyDetailsRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SavePolicyDetailsRequestResult" type="tns:InsuranceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateLoginResult" type="tns:ValidationDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidationDetails">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ValidLogin" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="WebServiceSourceID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidPolicy" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidRequest" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:StringBuilder" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StringBuilder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Capacity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidatePolicyRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_insuranceRequest" type="tns:InsuranceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePolicyRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidatePolicyRequestResult" type="tns:InsuranceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetIPIDDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIPIDDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetIPIDDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIPIDDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInsuranceProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInsuranceProducts" />
+  </wsdl:message>
+  <wsdl:message name="GetInsuranceProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInsuranceProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelPolicySoapIn">
+    <wsdl:part name="parameters" element="tns:CancelPolicy" />
+  </wsdl:message>
+  <wsdl:message name="CancelPolicySoapOut">
+    <wsdl:part name="parameters" element="tns:CancelPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicySoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePolicy" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicySoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicyByAuthenticationKeySoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePolicyByAuthenticationKey" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicyByAuthenticationKeySoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePolicyByAuthenticationKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCertificateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCertificate" />
+  </wsdl:message>
+  <wsdl:message name="GetCertificateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailedProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailedProductList" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailedProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailedProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncludedMakesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncludedMakes" />
+  </wsdl:message>
+  <wsdl:message name="GetIncludedMakesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncludedMakesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLendersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLenders" />
+  </wsdl:message>
+  <wsdl:message name="GetLendersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLendersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMakesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMakes" />
+  </wsdl:message>
+  <wsdl:message name="GetMakesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMakesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPoliciesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPolicies" />
+  </wsdl:message>
+  <wsdl:message name="GetPoliciesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPoliciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductList" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportsList" />
+  </wsdl:message>
+  <wsdl:message name="GetReportsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReprintListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReprintList" />
+  </wsdl:message>
+  <wsdl:message name="GetReprintListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReprintListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSavedDetailsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSavedDetailsList" />
+  </wsdl:message>
+  <wsdl:message name="GetSavedDetailsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSavedDetailsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="MTAPolicySoapIn">
+    <wsdl:part name="parameters" element="tns:MTAPolicy" />
+  </wsdl:message>
+  <wsdl:message name="MTAPolicySoapOut">
+    <wsdl:part name="parameters" element="tns:MTAPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportSoapIn">
+    <wsdl:part name="parameters" element="tns:PrintReport" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportSoapOut">
+    <wsdl:part name="parameters" element="tns:PrintReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReprintPolicySoapIn">
+    <wsdl:part name="parameters" element="tns:ReprintPolicy" />
+  </wsdl:message>
+  <wsdl:message name="ReprintPolicySoapOut">
+    <wsdl:part name="parameters" element="tns:ReprintPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDetails" />
+  </wsdl:message>
+  <wsdl:message name="SaveDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePolicySoapIn">
+    <wsdl:part name="parameters" element="tns:ValidatePolicy" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePolicySoapOut">
+    <wsdl:part name="parameters" element="tns:ValidatePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePolicyByAuthenticationKeySoapIn">
+    <wsdl:part name="parameters" element="tns:ValidatePolicyByAuthenticationKey" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePolicyByAuthenticationKeySoapOut">
+    <wsdl:part name="parameters" element="tns:ValidatePolicyByAuthenticationKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIDDocumentRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:IPIDDocumentRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPIDDocumentRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:IPIDDocumentRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsuranceProductsRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:InsuranceProductsRequest" />
+  </wsdl:message>
+  <wsdl:message name="InsuranceProductsRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:InsuranceProductsRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelPolicyByInsuranceRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelPolicyByInsuranceRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelPolicyByInsuranceRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelPolicyByInsuranceRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePasswordRequest" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAndHandlePISoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAndHandlePI" />
+  </wsdl:message>
+  <wsdl:message name="CreateAndHandlePISoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAndHandlePIResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicyByInsuranceRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePolicyByInsuranceRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicyByInsuranceRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePolicyByInsuranceRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailedProductListRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailedProductListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailedProductListRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailedProductListRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncludedMakesRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncludedMakesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetIncludedMakesRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncludedMakesRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLendersRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLendersRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetLendersRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLendersRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMakesRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMakesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMakesRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMakesRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductListRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportsListRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportsListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetReportsListRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportsListRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReprintListRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReprintListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetReprintListRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReprintListRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSavedDetailsListRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSavedDetailsListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSavedDetailsListRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSavedDetailsListRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="MTAPolicyByInsuranceRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:MTAPolicyByInsuranceRequest" />
+  </wsdl:message>
+  <wsdl:message name="MTAPolicyByInsuranceRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:MTAPolicyByInsuranceRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:PrintReportRequest" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:PrintReportRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReprintPolicyRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ReprintPolicyRequest" />
+  </wsdl:message>
+  <wsdl:message name="ReprintPolicyRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ReprintPolicyRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="SavePISoapIn">
+    <wsdl:part name="parameters" element="tns:SavePI" />
+  </wsdl:message>
+  <wsdl:message name="SavePISoapOut">
+    <wsdl:part name="parameters" element="tns:SavePIResponse" />
+  </wsdl:message>
+  <wsdl:message name="SavePolicyDetailsRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:SavePolicyDetailsRequest" />
+  </wsdl:message>
+  <wsdl:message name="SavePolicyDetailsRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:SavePolicyDetailsRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateLogin" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePolicyRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidatePolicyRequest" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePolicyRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidatePolicyRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InsuranceWebServiceSoap">
+    <wsdl:operation name="GetIPIDDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a single IPID document for a specified product (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetIPIDDocumentSoapIn" />
+      <wsdl:output message="tns:GetIPIDDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceProducts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of Gap products for a specified dealer (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetInsuranceProductsSoapIn" />
+      <wsdl:output message="tns:GetInsuranceProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit a policy cancellation request (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:CancelPolicySoapIn" />
+      <wsdl:output message="tns:CancelPolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Change an existing valid password (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create an insurance policy by username and password (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:CreatePolicySoapIn" />
+      <wsdl:output message="tns:CreatePolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicyByAuthenticationKey">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create an insurance policy by username and authentication key (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:CreatePolicyByAuthenticationKeySoapIn" />
+      <wsdl:output message="tns:CreatePolicyByAuthenticationKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method is is no longer in use, please use CreatePolicy</wsdl:documentation>
+      <wsdl:input message="tns:GetCertificateSoapIn" />
+      <wsdl:output message="tns:GetCertificateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailedProductList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a detailed list of insurance products including product limits (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetDetailedProductListSoapIn" />
+      <wsdl:output message="tns:GetDetailedProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludedMakes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all allowed vehicle makes for a specified dealer (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetIncludedMakesSoapIn" />
+      <wsdl:output message="tns:GetIncludedMakesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLenders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all insurance finance companies (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetLendersSoapIn" />
+      <wsdl:output message="tns:GetLendersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMakes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all vehicle makes (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetMakesSoapIn" />
+      <wsdl:output message="tns:GetMakesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicies">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method is no longer in use, please use GetProductList</wsdl:documentation>
+      <wsdl:input message="tns:GetPoliciesSoapIn" />
+      <wsdl:output message="tns:GetPoliciesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of insurance products for a specified dealer (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetProductListSoapIn" />
+      <wsdl:output message="tns:GetProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportsList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all available reports (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetReportsListSoapIn" />
+      <wsdl:output message="tns:GetReportsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReprintList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all policies issued for a specified period (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetReprintListSoapIn" />
+      <wsdl:output message="tns:GetReprintListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedDetailsList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all saved sessions (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:GetSavedDetailsListSoapIn" />
+      <wsdl:output message="tns:GetSavedDetailsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MTAPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit a policy amendement (MTA) request (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:MTAPolicySoapIn" />
+      <wsdl:output message="tns:MTAPolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Print a specified report (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:PrintReportSoapIn" />
+      <wsdl:output message="tns:PrintReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReprintPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reprint an insurance certificate for an existing policy (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:ReprintPolicySoapIn" />
+      <wsdl:output message="tns:ReprintPolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save a single customer insurance record (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:SaveDetailsSoapIn" />
+      <wsdl:output message="tns:SaveDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate an insurance policy request by username and password (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:ValidatePolicySoapIn" />
+      <wsdl:output message="tns:ValidatePolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicyByAuthenticationKey">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate an insurance policy request by username and authentication key (XML format)</wsdl:documentation>
+      <wsdl:input message="tns:ValidatePolicyByAuthenticationKeySoapIn" />
+      <wsdl:output message="tns:ValidatePolicyByAuthenticationKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IPIDDocumentRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a single IPID document for a specified product (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:IPIDDocumentRequestSoapIn" />
+      <wsdl:output message="tns:IPIDDocumentRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsuranceProductsRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of Gap products for a specified dealer (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:InsuranceProductsRequestSoapIn" />
+      <wsdl:output message="tns:InsuranceProductsRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicyByInsuranceRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit a policy cancellation request (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:CancelPolicyByInsuranceRequestSoapIn" />
+      <wsdl:output message="tns:CancelPolicyByInsuranceRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Change an existing valid password (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordRequestSoapIn" />
+      <wsdl:output message="tns:ChangePasswordRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndHandlePI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create a prescribed information quote and send an email to the customer (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:CreateAndHandlePISoapIn" />
+      <wsdl:output message="tns:CreateAndHandlePISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create a new customer record (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:CreateCustomerSoapIn" />
+      <wsdl:output message="tns:CreateCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicyByInsuranceRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create an insurance policy (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:CreatePolicyByInsuranceRequestSoapIn" />
+      <wsdl:output message="tns:CreatePolicyByInsuranceRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailedProductListRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a detailed list of insurance products including product limits (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetDetailedProductListRequestSoapIn" />
+      <wsdl:output message="tns:GetDetailedProductListRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludedMakesRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all allowed vehicle makes for a specified dealer (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetIncludedMakesRequestSoapIn" />
+      <wsdl:output message="tns:GetIncludedMakesRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLendersRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all insurance finance companies (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetLendersRequestSoapIn" />
+      <wsdl:output message="tns:GetLendersRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMakesRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all vehicle makes (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetMakesRequestSoapIn" />
+      <wsdl:output message="tns:GetMakesRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductListRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of insurance products for a specified dealer (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetProductListRequestSoapIn" />
+      <wsdl:output message="tns:GetProductListRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportsListRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all available reports (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetReportsListRequestSoapIn" />
+      <wsdl:output message="tns:GetReportsListRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReprintListRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all policies issued for a specified period (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetReprintListRequestSoapIn" />
+      <wsdl:output message="tns:GetReprintListRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedDetailsListRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all saved sessions (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:GetSavedDetailsListRequestSoapIn" />
+      <wsdl:output message="tns:GetSavedDetailsListRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MTAPolicyByInsuranceRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit a policy amendement (MTA) request (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:MTAPolicyByInsuranceRequestSoapIn" />
+      <wsdl:output message="tns:MTAPolicyByInsuranceRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintReportRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Print a specified report for a specified date (object based)</wsdl:documentation>
+      <wsdl:input message="tns:PrintReportRequestSoapIn" />
+      <wsdl:output message="tns:PrintReportRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReprintPolicyRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reprint an insurance certificate for an existing policy (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:ReprintPolicyRequestSoapIn" />
+      <wsdl:output message="tns:ReprintPolicyRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save a prescribed information record (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:SavePISoapIn" />
+      <wsdl:output message="tns:SavePISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePolicyDetailsRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save a single customer insurance record (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:SavePolicyDetailsRequestSoapIn" />
+      <wsdl:output message="tns:SavePolicyDetailsRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate current login details using either password or authentication key (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:ValidateLoginSoapIn" />
+      <wsdl:output message="tns:ValidateLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicyRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate an insurance policy request (object based format)</wsdl:documentation>
+      <wsdl:input message="tns:ValidatePolicyRequestSoapIn" />
+      <wsdl:output message="tns:ValidatePolicyRequestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InsuranceWebServiceSoap" type="tns:InsuranceWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIPIDDocument">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetIPIDDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceProducts">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetInsuranceProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicy">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/CancelPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicy">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/CreatePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicyByAuthenticationKey">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/CreatePolicyByAuthenticationKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificate">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailedProductList">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetDetailedProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludedMakes">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetIncludedMakes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLenders">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetLenders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakes">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetMakes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicies">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetPolicies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportsList">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReportsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReprintList">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReprintList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedDetailsList">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetSavedDetailsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTAPolicy">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/MTAPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/PrintReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprintPolicy">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ReprintPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDetails">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/SaveDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicy">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidatePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicyByAuthenticationKey">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidatePolicyByAuthenticationKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPIDDocumentRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/IPIDDocumentRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsuranceProductsRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/InsuranceProductsRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicyByInsuranceRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/CancelPolicyByInsuranceRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ChangePasswordRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndHandlePI">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/CreateAndHandlePI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicyByInsuranceRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/CreatePolicyByInsuranceRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailedProductListRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetDetailedProductListRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludedMakesRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetIncludedMakesRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLendersRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetLendersRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakesRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetMakesRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductListRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetProductListRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportsListRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReportsListRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReprintListRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReprintListRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedDetailsListRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/GetSavedDetailsListRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTAPolicyByInsuranceRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/MTAPolicyByInsuranceRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReportRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/PrintReportRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprintPolicyRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ReprintPolicyRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePI">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/SavePI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePolicyDetailsRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/SavePolicyDetailsRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidateLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicyRequest">
+      <soap:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidatePolicyRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InsuranceWebServiceSoap12" type="tns:InsuranceWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIPIDDocument">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetIPIDDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceProducts">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetInsuranceProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicy">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/CancelPolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicy">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/CreatePolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicyByAuthenticationKey">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/CreatePolicyByAuthenticationKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificate">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetCertificate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailedProductList">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetDetailedProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludedMakes">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetIncludedMakes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLenders">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetLenders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakes">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetMakes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicies">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetPolicies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportsList">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReportsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReprintList">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReprintList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedDetailsList">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetSavedDetailsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTAPolicy">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/MTAPolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/PrintReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprintPolicy">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ReprintPolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDetails">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/SaveDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicy">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidatePolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicyByAuthenticationKey">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidatePolicyByAuthenticationKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPIDDocumentRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/IPIDDocumentRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsuranceProductsRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/InsuranceProductsRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicyByInsuranceRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/CancelPolicyByInsuranceRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ChangePasswordRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndHandlePI">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/CreateAndHandlePI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicyByInsuranceRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/CreatePolicyByInsuranceRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailedProductListRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetDetailedProductListRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludedMakesRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetIncludedMakesRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLendersRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetLendersRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakesRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetMakesRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductListRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetProductListRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportsListRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReportsListRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReprintListRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetReprintListRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedDetailsListRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/GetSavedDetailsListRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTAPolicyByInsuranceRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/MTAPolicyByInsuranceRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReportRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/PrintReportRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprintPolicyRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ReprintPolicyRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePI">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/SavePI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePolicyDetailsRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/SavePolicyDetailsRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidateLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePolicyRequest">
+      <soap12:operation soapAction="http://www.mapfreabraxas.com/webservices/ValidatePolicyRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InsuranceWebService">
+    <wsdl:port name="InsuranceWebServiceSoap" binding="tns:InsuranceWebServiceSoap">
+      <soap:address location="https://dev-partners.mapfre.co.uk/insurancewebservice/InsuranceWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InsuranceWebServiceSoap12" binding="tns:InsuranceWebServiceSoap12">
+      <soap12:address location="https://dev-partners.mapfre.co.uk/insurancewebservice/InsuranceWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

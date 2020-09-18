@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInsuranceServiceSite", "TestInsuranceServiceSite\TestInsuranceServiceSite.csproj", "{8E130C39-495B-4C34-A158-8C1956F09E02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInsuranceServiceSite.Tests", "TestInsuranceServiceSite.Tests\TestInsuranceServiceSite.Tests.csproj", "{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInsuranceServiceAPI", "TestInsuranceServiceAPI\TestInsuranceServiceAPI.csproj", "{BF3097F2-060A-41DD-94EF-275858342703}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		Live|Any CPU = Live|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+		UAT|Any CPU = UAT|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Live|Any CPU.ActiveCfg = Live|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Live|Any CPU.Build.0 = Live|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{8E130C39-495B-4C34-A158-8C1956F09E02}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Live|Any CPU.ActiveCfg = Live|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Live|Any CPU.Build.0 = Live|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{B0EB8AEB-BB97-4649-B69B-4A7A3BFDED1F}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Live|Any CPU.ActiveCfg = Live|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Live|Any CPU.Build.0 = Live|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Stage|Any CPU.ActiveCfg = UAT|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.Stage|Any CPU.Build.0 = UAT|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.UAT|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3097F2-060A-41DD-94EF-275858342703}.UAT|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B017E0A7-4A3F-4D67-BB3D-B20C9768A3E6}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sgb002002-tfs.int.mapfre.net/tfs/mapfreuk
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TestInsuranceServiceSite.Tests\\TestInsuranceServiceSite.Tests.csproj
+		SccProjectName1 = TestInsuranceServiceSite.Tests
+		SccLocalPath1 = TestInsuranceServiceSite.Tests
+		SccProjectUniqueName2 = TestInsuranceServiceSite\\TestInsuranceServiceSite.csproj
+		SccProjectName2 = TestInsuranceServiceSite
+		SccLocalPath2 = TestInsuranceServiceSite
+		SccProjectUniqueName3 = TestInsuranceServiceAPI\\TestInsuranceServiceAPI.csproj
+		SccProjectName3 = TestInsuranceServiceAPI
+		SccLocalPath3 = TestInsuranceServiceAPI
+	EndGlobalSection
+EndGlobal
